@@ -104,15 +104,9 @@ analytics:
 
 # Site Author
 author:
-<<<<<<< HEAD
   name             : "Mindy K"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "3 years and on-going Computer Vision AI journey"
-=======
-  name             : "mindy kang"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "3 years and on-going computer vision ai journey"
->>>>>>> 73123f85056e68fb2baf79ad251d8a77d4aa2618
   location         : "Seoul, Korea"
   email            :
   links:
