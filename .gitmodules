@@ -1,0 +1,9 @@
+[submodule "themes/kaslaanka"]
+	path = themes/kaslaanka
+	url = https://github.com/M1cR0xf7/kaslaanka.git
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper
+[submodule "public"]
+	path = public
+	url = git@github.com:mindyjkang/mindyjkang.github.io.git
