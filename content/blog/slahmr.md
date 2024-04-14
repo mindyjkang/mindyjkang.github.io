@@ -74,7 +74,7 @@ Many sensors are used in SLAM such as rgb camera, depth sensors, IMUs or LiDAR. 
     
     → $^c\Gamma^i_t \in R^{3}$ : root translation in camera coordinate frame
     
-4. 2d joints coordniate
+4. 2d joints coordinate
     
     Run [VITPose](https://github.com/ViTAE-Transformer/ViTPose) in each frame to obtain 2d joints coordinates to use for optimization
     
@@ -101,7 +101,7 @@ $$
 E_{data} = \sum^N_{i=1}\sum^T_{t=1}\psi^i_t\rho(\Pi_K(R_t \cdot ^wJ^i_t + \alpha T_t) -x^i_t
 $$
 
-- $\Pi_K(R_t \cdot ^wJ^i_t + \alpha T_t)$  : the extrinsics $R_t , T_t$ apply the camera movement to the world joint coordinate and the function $\Pi_k$ applies intrinsic $K$ to the world joints to project them to the camera cooridnate frame
+- $\Pi_K(R_t \cdot ^wJ^i_t + \alpha T_t)$  : the extrinsics $R_t , T_t$ apply the camera movement to the world joint coordinate and the function $\Pi_k$ applies intrinsic $K$ to the world joints to project them to the camera coordinate frame
 - Only optimize global orientation and root translation $\{ ^w\Phi^i_t , ^w\Gamma^i_t \}$ in the first stage since the loss is very under constrained.
 
 $$
@@ -136,13 +136,17 @@ $$
 
 ![HuMoR](/slahmrimages/HuMoR__3D_Human_Motion_Model_for_Robust_Pose_Estimation_(ICCV_2021)_6-35_screenshot.png)
 
-Following HuMoR optimization method, Slahmr optimizaes for camera scale $\alpha$,  ground plane $g$, initial human trajectories $\{ s^0_0, ..., s^N_0\}$, transition latents $z^i_t$. HuMoR method is handled with details in another blog post. 
+HuMoR
+
+Following HuMoR optimization method, Slahmr optimizes for camera scale $\alpha$,  ground plane $g$, initial human trajectories $\{ s^0_0, ..., s^N_0\}$, transition latents $z^i_t$. HuMoR method is handled with details in another blog post. 
 
 $$
 \underset{\alpha, g, \{s^i_0\}^N_{i=0},\{\{z^i_t\}^T_{t=1}\}^N_{i=1}}{min} \lambda_{data}E_{data}+\lambda_{\beta}E_{\beta}+\lambda_{pose}E_{pose}+E_{prior}+E_{env}
 $$
 
 ## Demo
+
+I took an in-the-wild video of newjeans dance practice video and ran Slahmr to go through the optimization process. Then visualized the results with rerun-sdk.
 
 Let’s take a look at the result of each optimization stage
 
