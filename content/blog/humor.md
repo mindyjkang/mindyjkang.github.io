@@ -77,7 +77,7 @@ $$
 p_\theta (z_t|x_{t-1}) = N(z_t; ~\mu_\theta(x_{t-1}), \sigma_\theta(x_{t-1}))
 $$
 
-Also decoder $p_\theta(x_t|z_t, x_{t-1})$ is also conditioned on previous state ($x_{t-1}$) to output $\Delta_\theta$ and $\hat{c}_t$. $\Delta_\theta$ is change in state that forms current state estimate ($x_t$) that is predicted by the model. 
+Also decoder $p_\theta(x_t|z_t, x_{t-1})$ is also conditioned on previous state ($x_{t-1}$) to output $\Delta_\theta$ and $c_t$. $\Delta_\theta$ is change in state that forms current state estimate ($x_t$) that is predicted by the model. 
 
 $$
 x_{t} = x_{t-1} + \Delta_\theta(z_t, x_{t-1}) + \eta , ~~~ \eta \sim N(0, I)
