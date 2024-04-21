@@ -4,6 +4,10 @@ date = 2024-04-21T21:27:42+09:00
 draft = false
 +++
 
+[HuMoR](https://geometry.stanford.edu/projects/humor/) is a expressive human motion generation model that incorporates motion priors in generating next human motion and is being used actively for refining noisy human pose predictions into more plausible sequences. 
+
+This post aims to understand the paper in a probabilistic perspective.
+
 ## Background
 
 ### Bayesian Statistics
