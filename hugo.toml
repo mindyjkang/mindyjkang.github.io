@@ -1,16 +1,39 @@
 baseURL = 'https://mindyjkang.github.io/'
 languageCode = 'en-us'
-title = 'Mindy Blog'
+title = 'Mindys Neural Notes'
 theme = "paper"
+sectionPagesMenu = 'main'
+
+[[menu.main]]
+    name = "Home"
+    weight = 10
+    url = "/"
+
+[[menu.main]]
+    name = "Paper Reviews"
+    weight = 20
+    identifier = "blog"
+    url = "/blog/"
+
+[[menu.main]]
+    name = "Daily"
+    weight = 30
+    identifier = "daily"
+    url = "/daily/"
 
 [params]
   # color style
-  color = 'linen'                           # linen, wheat, gray, light
+  color = 'linen'
+  github = 'mindyjkang'                           # linen, wheat, gray, light
+  linkedin = 'min-jung-kang-582023196'
 
   # misc
   disableHLJS = true                        # disable highlight.js
-  disablePostNavigation = true              # disable post navigation
+  disablePostNavigation = false              # disable post navigation
   monoDarkIcon = true                       # show monochrome dark mode icon
   gravatarCdn = 'GRAVATAR_CDN_LINK'         # e.g. 'https://cdn.v2ex.com/gravatar/'
   math = true                               # enable KaTeX math typesetting globally
+  enableEmoji = true
 
+  name = "Mindy Kang"
+  bio = "Hello ! I'm Computer Vision AI Engineer working in Seoul, Korea. I have experience specialized in AI for cctvs and currently insterested in 3d human pose estimation. This is my blog for sharing paper reviews and sharing some ideas! :) "
